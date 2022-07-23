@@ -8,12 +8,12 @@
 <div style="text-align: center;">
     <h2>安永研　CSアカウント作成フォーム</h2>
 
-    <h3>Form</h3>
     <form action="#" th:action="@{/greeting}" th:object="${greeting}" method="post">
 
     <table style="margin: 0 auto;">
         <tr>
             <td>ユーザー名: </td><td><label>
+
             <input type="text" th:field="*{id}" />
         </label></td>
         </tr>
@@ -30,7 +30,6 @@
     </table>
         <p>
             <button type="button" onclick="submit();">登録</button>
-            <input type="reset" value="リセット" />
         </p>
     </form>
 </div>

@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>YasunagaLab cs account form</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<div style="text-align: center;">
+    <h2>安永研　CSアカウント作成フォーム</h2>
+
+    <form action="#" th:action="@{/register_user}" th:object="${user}" method="post">
+
+        <table style="margin: 0 auto;">
+            <tr>
+                <td>ユーザー名:</td>
+                <td><label>
+                    <input type="text" th:field="*{userName}"/>
+                </label></td>
+            </tr>
+            <tr>
+                <td>ユーザーID:</td>
+                <td><label>
+                    <input type="text" th:field="*{uid}"/>
+                </label></td>
+            </tr>
+            <tr>
+                <td>パスワード:</td>
+                <td><label>
+                    <input type="password" th:field="*{password}"/>
+                </label></td>
+            </tr>
+            <tr>
+                <td>パスワード確認:</td>
+                <td><label>
+                    <input type="password" th:field="*{password}"/>
+                </label></td>
+            </tr>
+        </table>
+        <p>
+            <button type="button" onclick="submit();">登録</button>
+        </p>
+    </form>
+</div>
+</body>
+</html>
