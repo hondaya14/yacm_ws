@@ -11,14 +11,15 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 public class RegisterUserController {
     @GetMapping("/register_user")
-    public String greetingForm(Model model) {
+    public String registerUserForm(Model model) {
         model.addAttribute("user", new User());
-        return "registerUser";
+        return "register_user/registerUser";
     }
 
     @PostMapping("/register_user")
-    public String greetingSubmit(@ModelAttribute User user, Model model) {
-        model.addAttribute("greeting", user);
-        return "result";
+    public String registerUserSubmit(@ModelAttribute User user, Model model) {
+        model.addAttribute("user", user);
+        System.out.println(user.toString());
+        return "register_user/resultRegisterUser";
     }
 }
