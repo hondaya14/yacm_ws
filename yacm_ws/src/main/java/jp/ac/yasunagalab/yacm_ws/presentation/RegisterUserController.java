@@ -19,7 +19,7 @@ public class RegisterUserController {
     @PostMapping("/register_user")
     public String registerUserSubmit(@ModelAttribute User user, Model model) {
         model.addAttribute("user", user);
-        System.out.println(user.toString());
+        // get user instance from client
         return "register_user/resultRegisterUser";
     }
 }
